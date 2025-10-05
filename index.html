@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Abdinasir Ahmed Hossn - Fun World</title>
+  <style>
+    * {
+      margin: 0; padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      background: linear-gradient(135deg, #ff00cc, #3333ff);
+      color: white;
+      overflow-x: hidden;
+    }
+
+    header {
+      position: fixed;
+      width: 100%;
+      top: 0; left: 0;
+      background: rgba(0,0,0,0.4);
+      padding: 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      z-index: 1000;
+      backdrop-filter: blur(10px);
+    }
+
+    header h1 {
+      color: #00ffff;
+      font-size: 1.8rem;
+      animation: glow 2s infinite alternate;
+    }
+
+    @keyframes glow {
+      from { text-shadow: 0 0 5px #00ffff; }
+      to { text-shadow: 0 0 20px #00ffff; }
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 15px;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+
+    nav a:hover {
+      color: #00ffff;
+      text-shadow: 0 0 10px #00ffff;
+    }
+
+    section {
+      min-height: 100vh;
+      padding: 100px 10%;
+      text-align: center;
+      transition: background 1s;
+    }
+
+    #home {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      animation: fadeIn 2s ease-in;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .btn {
+      background: #00ffff;
+      color: black;
+      padding: 10px 20px;
+      border-radius: 25px;
+      text-decoration: none;
+      font-weight: bold;
+      margin-top: 20px;
+      transition: 0.3s;
+    }
+
+    .btn:hover {
+      background: white;
+      box-shadow: 0 0 15px #00ffff;
+    }
+
+    #gallery {
+      background: linear-gradient(135deg, #3333ff, #ff00cc);
+    }
+
+    .gallery-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      margin-top: 40px;
+    }
+
+    .gallery-container img {
+      width: 100%;
+      border-radius: 20px;
+      transition: transform 0.5s, box-shadow 0.5s;
+    }
+
+    .gallery-container img:hover {
+      transform: scale(1.1);
+      box-shadow: 0 0 20px #00ffff;
+    }
+
+    #funzone {
+      background: linear-gradient(135deg, #ff6600, #ff0099);
+    }
+
+    #playlist {
+      margin-top: 30px;
+      background: rgba(0,0,0,0.3);
+      border-radius: 15px;
+      padding: 20px;
+      box-shadow: 0 0 20px rgba(255,255,255,0.3);
+    }
+
+    #playlist ul {
+      list-style: none;
+      padding: 0;
+      margin-top: 10px;
+    }
+
+    #playlist li {
+      padding: 10px;
+      margin: 8px 0;
+      border-radius: 10px;
+      background: rgba(255,255,255,0.1);
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    #playlist li:hover {
+      background: rgba(255,255,255,0.3);
+      color: #000;
+    }
+
+    #playlist li.active {
+      background: #00ffff;
+      color: #000;
+      font-weight: bold;
+      box-shadow: 0 0 15px #00ffff;
+    }
+
+    #contact {
+      background: linear-gradient(135deg, #00ccff, #6600ff);
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 15px;
+      max-width: 400px;
+      margin: auto;
+    }
+
+    input, textarea {
+      width: 100%;
+      padding: 10px;
+      border-radius: 10px;
+      border: none;
+      outline: none;
+    }
+
+    button {
+      background: #00ffff;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 20px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    button:hover {
+      background: white;
+      color: #000;
+      box-shadow: 0 0 15px #00ffff;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: rgba(0,0,0,0.3);
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Abdinasir Ahmed Hossn</h1>
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#funzone">Fun Zone</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <section id="home">
+    <h2>Welcome to Abdinasir’s Fun World 🎉</h2>
+    <p>Enjoy Somali Music, Jokes, and Animations in one cool place!</p>
+    <a href="#funzone" class="btn">Start the Fun</a>
+  </section>
+
+  <section id="gallery">
+    <h2>🎨 Colorful Gallery</h2>
+    <div class="gallery-container">
+      <img src="https://picsum.photos/400/250?random=1" alt="">
+      <img src="https://picsum.photos/400/250?random=2" alt="">
+      <img src="https://picsum.photos/400/250?random=3" alt="">
+      <img src="https://picsum.photos/400/250?random=4" alt="">
+    </div>
+  </section>
+
+  <section id="funzone">
+    <h2>🎧 Somali Music Playlist</h2>
+    <div id="playlist">
+      <h3>Select a Song:</h3>
+      <ul id="songList"></ul>
+    </div>
+
+    <div style="margin-top:20px;">
+      <button onclick="prevSong()">⏮ Prev</button>
+      <button onclick="togglePlay()">▶️ / ⏸</button>
+      <button onclick="nextSong()">⏭ Next</button>
+    </div>
+
+    <p id="currentSong" style="margin-top:20px; font-size:1.2rem;"></p>
+  </section>
+
+  <section id="contact">
+    <h2>📞 Contact Me</h2>
+    <form onsubmit="event.preventDefault(); alert('Message sent successfully!')">
+      <input type="text" placeholder="Your Name" required>
+      <input type="email" placeholder="Your Email" required>
+      <textarea rows="4" placeholder="Your Message..." required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </section>
+
+  <footer>
+    © 2025 Abdinasir Ahmed Hossn | Fun World 🌍
+  </footer>
+
+  <script>
+    const songs = [
+      { title: "Sharma Boy - Maxaa Ka Badali Kartaa", url: "SHARMA_BOY_HEES_CUSUB_MAXA_KABADELI_KARTA_WAXBA_Ciiltire_Officail_2023(128k).m4a" },
+      { title: "Sharma Boy - Macalimoo", url: "Sharma_Boy_-_Macalimoo__Official_Music_Video_(256k).mp3" },
+      { title: "Sharma Boy - Adiga Kaligaa", url: "Sharma_Boy_ft._Rahma_Hassan_-_Adiga_Kaligaa__Official_Music_Video_(256k).mp3" },
+      { title: "Sharma Boy - Masheegee", url: "Sharma_Boy_-_Masheegee__Official_Music_Video_(256k).mp3" },
+      { title: "Lil Baliil - If", url: "LIL_BALIIL___IF___FT__LE-YO___ISMA_IP___OFFICIAL_MUSIC_VIDEO__(256k).mp3" },
+      { title: "Lil Baliil - Hayweeydiin", url: "Lil_Baliil_X_SMK_-_HAIWEEYDIIN___OFFICIAL_MUSIC_VIDEO__(256k).mp3" },
+      { title: "Lil Baliil - Wakere", url: "LIL_BALIIL_-_WAKERE____OFFICIAL_MUSIC_VIDEO___sms_skiza_7755534_to_811(256k).mp3" },
+      { title: "Lil Baliil - Quruxdiyo Qof Ah", url: "LIL_BALIIL_-_QURUXDIYO_QOF_AH___OFFICIAL_MUSIC_VIDEO__(256k).mp3" },
+      { title: "Sharma Boy - Ahil Yare", url: "Sharma_Boy_-_Ahil_Yare__Official_Audio_(256k).mp3" },
+      { title: "Lil Baliil - Ku Aaway", url: "Lil_Baliil_Ft_Lii_Paato___Awes_Lilaah___Kuaaway_Official_Video__(256k).mp3" }
+    ];
+
+    let audio = new Audio();
+    let currentIndex = -1;
+    let playing = false;
+
+    const listEl = document.getElementById('songList');
+    const currentSongEl = document.getElementById('currentSong');
+
+    // samee liiska
+    songs.forEach((song, i) => {
+      const li = document.createElement('li');
+      li.textContent = song.title;
+      li.addEventListener('click', () => playSong(i));
+      listEl.appendChild(li);
+    });
+
+    function playSong(index) {
+      if (index < 0 || index >= songs.length) return;
+      if (currentIndex !== -1) listEl.children[currentIndex].classList.remove('active');
+      currentIndex = index;
+      audio.src = songs[index].url;
+      audio.play();
+      playing = true;
+      listEl.children[index].classList.add('active');
+      currentSongEl.textContent = "🎵 Now Playing: " + songs[index].title;
+    }
+
+    function togglePlay() {
+      if (playing) {
+        audio.pause();
+        playing = false;
+      } else {
+        if (currentIndex === -1) playSong(0);
+        else audio.play();
+        playing = true;
+      }
+    }
+
+    function nextSong() {
+      let next = currentIndex + 1;
+      if (next >= songs.length) next = 0;
+      playSong(next);
+    }
+
+    function prevSong() {
+      let prev = currentIndex - 1;
+      if (prev < 0) prev = songs.length - 1;
+      playSong(prev);
+    }
+
+    audio.addEventListener('ended', nextSong);
+  </script>
+</body>
+</html>
